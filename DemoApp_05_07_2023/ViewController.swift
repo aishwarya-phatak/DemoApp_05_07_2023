@@ -15,10 +15,30 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("view did load -- for view Controller")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("View Will Appear-- for View Controller")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("view did appear -- for view Controller")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("FVC - viewWillDisappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("FVC - viewDidDisappear")
+    }
     @IBAction func changeColourButton(_ sender: Any) {
+        
+        var secondViewControllerObject =  self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController
+        
+        navigationController?.pushViewController(secondViewControllerObject!, animated: true)
+        
 //        print(sender.currentTitle)
 //        print(sender.backgroundColor)
 //        print(sender.buttonType)
