@@ -77,7 +77,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9pY-ZO-vNO"/>
+                    <navigationItem key="navigationItem" id="9pY-ZO-vNO">
+                        <barButtonItem key="rightBarButtonItem" title="Add" image="plus" catalog="system" id="cHq-ld-guF"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="firstLabel" destination="BAI-zC-98l" id="8Yc-j1-jne"/>
                         <outlet property="secondLabel" destination="Rfn-cJ-bt1" id="cfU-Yk-a7m"/>
@@ -105,6 +107,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFO-lQ-Mkk">
+                                <rect key="frame" x="146" y="352" width="106" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.38823529410000002" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backToFVC:" destination="sSk-p6-spD" eventType="touchUpInside" id="AG5-7f-kod"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eYu-qG-xjd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -116,6 +130,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

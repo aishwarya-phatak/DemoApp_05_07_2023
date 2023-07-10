@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     @IBAction func changeColourButton(_ sender: Any) {
         
         var secondViewControllerObject =  self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController
+    
         
         navigationController?.pushViewController(secondViewControllerObject!, animated: true)
         

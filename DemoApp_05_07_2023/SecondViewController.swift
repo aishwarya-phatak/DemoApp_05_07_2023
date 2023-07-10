@@ -29,6 +29,20 @@ class SecondViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         print("SVC - viewDidDisappear")
     }
+    
+    
+    @IBAction func backToFVC(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     /*
     // MARK: - Navigation
